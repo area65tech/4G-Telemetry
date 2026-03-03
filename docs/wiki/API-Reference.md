@@ -1,75 +1,79 @@
 # API Reference
 
-Technical specification for the AREA65 4G Telemetry data protocol.
+## Data Protocol
 
-## Communication Protocol
+### Format
 
-### UART Settings
+Compact JSON transmitted over selected interface.
 
-| Parameter | Value |
-|-----------|-------|
-| Baud Rate | 57600 |
-| Data Bits | 8 |
-| Parity | None |
-| Stop Bits | 1 |
-| Flow Control | None |
-
-### Data Format
-
-All data is transmitted as JSON strings, terminated with a newline character.
+### Example Payload
 
 ```json
 {"P1":52.15,"P2":10.45,"P3":26.87,"P4":1.12,"P5":49.33,"P6":6.21}
 ```
 
-## Parameter Specification
+### Parameters
 
-### Sensor Values (P1-P6)
+| Parameter | Description | Range |
+|-----------|-------------|-------|
+| P1-P20 | Sensor values | 00.00 - 99.99 |
 
-| Parameter | Type | Range | Precision |
-|-----------|------|-------|-----------|
-| P1 | Float | 0.00-99.99 | 2 decimal places |
-| P2 | Float | 0.00-99.99 | 2 decimal places |
-| P3 | Float | 0.00-99.99 | 2 decimal places |
-| P4 | Float | 0.00-99.99 | 2 decimal places |
-| P5 | Float | 0.00-99.99 | 2 decimal places |
-| P6 | Float | 0.00-99.99 | 2 decimal places |
+### Transmission Settings
 
-### Extended Parameters (P7-P20)
+| Setting | Value |
+|---------|-------|
+| Default Interval | 2000 ms |
+| Minimum Interval | 1000 ms |
+| Data Integrity | MicroSD backup during network interruption |
 
-Additional parameters follow the same format and can be used for custom sensor data.
+## Cloud Platform API
 
-## Timing
+### Features
 
-| Operation | Interval |
-|-----------|----------|
-| Default Transmission | 2000ms |
-| Minimum Interval | 1000ms |
-| Maximum Interval | No limit |
+- User configurable data labels
+- Graph plotting and visualization
+- Log/save data files
+- Print screen capabilities
+- Tiered user access (1, 3, or unlimited users)
+- Cloud storage (1GB, 3GB, 15GB options)
+- 90 days data backup (Premium plans)
 
-## Example Payloads
+### Access
 
-### Standard 6-Parameter
+Web browser login to AREA 65 cloud platform.
 
-```json
-{"P1":25.50,"P2":60.25,"P3":30.00,"P4":1.05,"P5":48.75,"P6":5.80}
-```
+## Interface Configuration
 
-### Minimal 2-Parameter
+### UART
 
-```json
-{"P1":25.50,"P2":60.25}
-```
+| Setting | Value |
+|---------|-------|
+| Baud Rate | 57600 |
+| Data Bits | 8 |
+| Parity | None |
+| Stop Bits | 1 |
+| Voltage | 5V TTL |
 
-### Extended 10-Parameter
+### CAN
 
-```json
-{"P1":25.50,"P2":60.25,"P3":30.00,"P4":1.05,"P5":48.75,"P6":5.80,"P7":12.34,"P8":56.78,"P9":90.12,"P10":34.56}
-```
+| Setting | Value |
+|---------|-------|
+| Protocol | CAN 2.0 |
+| Speed | Configurable |
+| Voltage | 5V |
 
-## Notes
+### SPI
 
-- Baud rate is fixed at 57600 (Spectronik FC compliant)
-- No CRC checksum (intentional by design)
-- Parameters P1-P20 are fixed in code for universal compatibility
-- JSON must be valid and properly formatted
+| Setting | Value |
+|---------|-------|
+| Mode | 0, 1, 2, 3 |
+| Clock | Configurable |
+| Voltage | 3.3V TTL |
+
+### I2C
+
+| Setting | Value |
+|---------|-------|
+| Address | Configurable |
+| Speed | Standard/Fast |
+| Voltage | 3.3V TTL |

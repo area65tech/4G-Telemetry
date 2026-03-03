@@ -1,52 +1,41 @@
 # Getting Started
 
-This guide will help you set up your AREA65 4G Telemetry Module for the first time.
-
-## Prerequisites
+## Package Contents
 
 - AREA65 4G Telemetry Module
-- Microcontroller (Arduino Uno, ESP32, or Raspberry Pi Pico)
-- Active SIM card with data plan
-- USB cable for programming
-- Jumper wires
-- 5V power supply
+- 4G + GPS 2-in-1 Antenna
+- 4-Pin XH Cable
+- 6-Pin XH Cable
+- USB-C Cable
 
-## Step 1: Insert SIM Card
+## Initial Setup
+
+### 1. SIM Card Installation
 
 1. Power off the module
-2. Insert SIM card with gold contacts facing down
-3. Ensure SIM card clicks into place
-4. Attach the 4G antenna
+2. Insert Nano SIM card into the SIM holder
+3. Ensure SIM has active data plan
 
-## Step 2: Hardware Connection
+### 2. Antenna Connection
 
-Connect the module to your microcontroller:
+1. Connect 4G antenna to 4G SMA connector
+2. Connect GPS antenna to GPS SMA connector
 
-| AREA65 Pin | Arduino | ESP32 | Raspberry Pi Pico |
-|------------|---------|-------|-------------------|
-| VCC        | 5V      | 5V    | 5V                |
-| GND        | GND     | GND   | GND               |
-| TX         | Pin 10  | GPIO16| Pin 9 (RX)        |
-| RX         | Pin 11  | GPIO17| Pin 8 (TX)        |
+### 3. Power Connection
 
-## Step 3: Software Setup
+Connect 5V @ 1A power via:
+- USB-C port (recommended for setup)
+- Communication interface pins
 
-1. Install Arduino IDE or your preferred development environment
-2. Select your board type
-3. Copy the example code from the examples folder
-4. Upload to your microcontroller
-5. Open Serial Monitor at 115200 baud
+### 4. Cloud Platform Access
 
-## Step 4: Verification
-
-You should see JSON output every 2 seconds:
-
-```json
-{"P1":52.15,"P2":10.45,"P3":26.87,"P4":1.12,"P5":49.33,"P6":6.21}
-```
+1. Visit AREA 65 Live Monitoring platform
+2. Create account or log in
+3. Register your device using the module ID
+4. Configure dashboard and data visualization
 
 ## Next Steps
 
-- [Hardware Integration](Hardware-Integration.md) - Detailed wiring and power requirements
-- [API Reference](API-Reference.md) - Data format and protocol details
-- [Troubleshooting](Troubleshooting.md) - Common issues and solutions
+- [Hardware Integration](Hardware-Integration.md) - Connect sensors
+- [API Reference](API-Reference.md) - Data protocol details
+- [Troubleshooting](Troubleshooting.md) - Common issues

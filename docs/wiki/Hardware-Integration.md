@@ -1,71 +1,72 @@
 # Hardware Integration
 
-Detailed guide for connecting the AREA65 4G Telemetry Module to various microcontrollers.
+## Interface Options
+
+The AREA65 module supports four communication interfaces that can operate simultaneously:
+
+### UART (TTL, 5V)
+
+| Pin | Function |
+|-----|----------|
+| TX | Transmit |
+| RX | Receive |
+| GND | Ground |
+| VCC | 5V Power |
+
+**Baud Rate:** 57600 (fixed, Spectronik FC compliant)
+
+### CAN 2.0
+
+| Pin | Function |
+|-----|----------|
+| CAN_H | CAN High |
+| CAN_L | CAN Low |
+| GND | Ground |
+
+**Protocol:** CAN 2.0A/B
+**Speed:** Configurable
+
+### SPI (TTL, 3.3V)
+
+| Pin | Function |
+|-----|----------|
+| MOSI | Master Out Slave In |
+| MISO | Master In Slave Out |
+| SCK | Serial Clock |
+| CS | Chip Select |
+| GND | Ground |
+
+**Voltage:** 3.3V TTL
+
+### I2C (TTL, 3.3V)
+
+| Pin | Function |
+|-----|----------|
+| SDA | Serial Data |
+| SCL | Serial Clock |
+| GND | Ground |
+
+**Voltage:** 3.3V TTL
+**Address:** Configurable
 
 ## Power Requirements
 
 | Parameter | Value |
 |-----------|-------|
-| Supply Voltage | 5V DC |
-| Peak Current | 500mA |
-| Average Current | 200mA |
-| Sleep Current | <10mA |
+| Voltage | 5V DC |
+| Current | 1A minimum |
+| Connector | USB-C or interface pins |
 
-**Note:** Use a power supply capable of delivering at least 500mA to ensure reliable operation during network transmission peaks.
+## Mechanical Dimensions
 
-## Pin Configuration
+| Dimension | Value (mm) |
+|-----------|------------|
+| Length | 78 |
+| Width | 57 |
+| Height | 24 |
+| Weight | 45g |
+| Mounting Holes | 2x Ø3.3mm through holes |
 
-### AREA65 Module Pinout
+## Connector Pinout
 
-| Pin | Name | Description |
-|-----|------|-------------|
-| 1 | VCC | Power supply (5V) |
-| 2 | GND | Ground |
-| 3 | TX | UART transmit |
-| 4 | RX | UART receive |
-| 5 | NET | Network status LED |
-| 6 | RST | Reset (active low) |
-
-## Microcontroller Connections
-
-### Arduino Uno/Nano
-
-| AREA65 | Arduino |
-|--------|---------|
-| VCC | 5V |
-| GND | GND |
-| TX | Pin 10 |
-| RX | Pin 11 |
-
-### ESP32
-
-| AREA65 | ESP32 |
-|--------|-------|
-| VCC | 5V |
-| GND | GND |
-| TX | GPIO16 |
-| RX | GPIO17 |
-
-### Raspberry Pi Pico
-
-| AREA65 | Pico |
-|--------|------|
-| VCC | 5V |
-| GND | GND |
-| TX | Pin 9 (RX) |
-| RX | Pin 8 (TX) |
-
-## Wiring Best Practices
-
-1. Keep UART wires as short as possible (<30cm)
-2. Use twisted pair for TX/RX lines
-3. Add 10uF capacitor between VCC and GND near module
-4. Ensure common ground between all devices
-5. Use level shifter if connecting to 3.3V logic devices
-
-## Antenna Connection
-
-- Use the included 4G antenna
-- Screw on firmly but do not overtighten
-- Position antenna vertically for best reception
-- Keep antenna away from metal objects
+Refer to product datasheet for detailed pinout diagrams.
