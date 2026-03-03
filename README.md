@@ -39,7 +39,7 @@ Plug-and-play LTE Cat 1 telemetry module for M2M and IoT applications with multi
 
 1. Insert Nano SIM card with active data plan
 2. Connect 4G+GPS antenna to SMA connectors
-3. Connect sensors via CAN, UART, I2C, or SPI
+3. Connect microcontroller via CAN, UART, I2C, or SPI
 4. Power via USB-C or interface pins (5V @ 1A)
 5. Access cloud platform at AREA 65 Live Monitoring
 6. Configure GUI, data labels, and visualization
@@ -59,9 +59,7 @@ Plug-and-play LTE Cat 1 telemetry module for M2M and IoT applications with multi
 
 | Platform | Interface | Location |
 |----------|-----------|----------|
-| Arduino | UART | examples/arduino/ |
-| ESP32 | UART/SPI | examples/esp32/ |
-| MicroPython | UART/I2C | examples/micropython/ |
+| Arduino | UART | examples/arduino/uart_sender/ |
 
 ---
 
