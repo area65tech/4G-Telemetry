@@ -1,0 +1,6 @@
+This is a placeholder for the firmware binary file.
+
+Replace this file with the actual .bin firmware:
+- area65_telemetry_v1.0.0.bin
+
+The firmware is proprietary software. Only distribute compiled binaries.
