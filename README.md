@@ -73,6 +73,15 @@ Current Version: v0.1.0
 
 ---
 
+
+## Firmware Updates
+
+Use the AREA65_FLASHER.exe tool located in `firmware/tools/` to update device firmware.
+
+**Download:** [AREA65_FLASHER.exe](firmware/tools/AREA65_FLASHER.exe)
+
+See [Firmware Flasher Guide](firmware/tools/README.md) for detailed instructions.
+
 ## License
 
 MIT License - see LICENSE file
