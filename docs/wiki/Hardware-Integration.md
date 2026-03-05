@@ -69,7 +69,21 @@ The AREA65 module supports four communication interfaces that can operate simult
 
 ## Connector Pinout
 
-Refer to product datasheet for detailed pinout diagrams.
+![Hardware Interfaces](hardware_interfaces.webp)
+
+The AREA65 module features the following hardware interfaces:
+
+| # | Interface | Description |
+|---|-----------|-------------|
+| 1 | 4G SMA | 4G cellular antenna connector |
+| 2 | GPS SMA | GPS antenna connector |
+| 3 | CAN | CAN 2.0 bus interface |
+| 4 | Nano SIM card holder | Nano SIM card slot for cellular connectivity |
+| 5 | SPI | SPI interface (3.3V TTL) |
+| 6 | I2C | I2C interface (3.3V TTL) |
+| 7 | UART | UART interface (TTL, 5V) |
+| 8 | USB-C | USB-C connector for power and data |
+| 9 | MicroSD card holder | MicroSD card slot for data logging |
 
 ## Arduino Integration
 
