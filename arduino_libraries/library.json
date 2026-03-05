@@ -1,0 +1,38 @@
+{
+    "name": "area65sender",
+    "version": "1.0.0",
+    "description": "A library for transmitting multi-parameter data as JSON via SoftwareSerial on Arduino.",
+    "keywords": "json, serial, telemetry, data-transmission",
+    "authors": {
+        "name": "Area65",
+        "email": "area65@example.com",
+        "url": "https://github.com/Area65/4G-Telemetry"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Area65/4G-Telemetry"
+    },
+    "homepage": "https://github.com/Area65/4G-Telemetry",
+    "frameworks": ["arduino"],
+    "platforms": "*",
+    "dependencies": {
+        "SoftwareSerial": "*"
+    },
+    "export": {
+        "include": [
+            "src",
+            "examples"
+        ],
+        "exclude": [
+            ".git",
+            ".github",
+            ".pio",
+            "test",
+            "docs"
+        ]
+    },
+    "build": {
+        "srcDir": "src",
+        "includeDir": "src"
+    }
+}

@@ -70,3 +70,14 @@ The AREA65 module supports four communication interfaces that can operate simult
 ## Connector Pinout
 
 Refer to product datasheet for detailed pinout diagrams.
+
+## Arduino Integration
+
+For Arduino-based projects, use the Area65Sender library:
+
+1. Install the library from [`arduino_libraries/area65sender.zip`](../arduino_libraries/area65sender.zip)
+2. Connect to the UART interface (TX, RX, GND, 5V)
+3. Use `SoftwareSerial` for flexible pin assignment
+4. Configure baud rate to 57600
+
+See the [Arduino Library](Arduino-Library.md) documentation for complete usage examples.

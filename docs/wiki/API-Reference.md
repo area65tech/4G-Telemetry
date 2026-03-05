@@ -77,3 +77,14 @@ Web browser login to AREA 65 cloud platform.
 | Address | Configurable |
 | Speed | Standard/Fast |
 | Voltage | 3.3V TTL |
+
+## Arduino Implementation
+
+The Area65Sender library implements this protocol for Arduino platforms:
+
+- Library: [`area65sender`](Arduino-Library.md)
+- Default Baud Rate: 57600
+- JSON Format: `{"P1":X.XX,"P2":X.XX,...,"P20":X.XX}`
+- Maximum Values: 20 parameters per transmission
+
+See the [Arduino Library](Arduino-Library.md) documentation for implementation details and usage examples.

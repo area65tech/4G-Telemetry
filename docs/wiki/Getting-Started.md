@@ -36,6 +36,7 @@ Connect 5V @ 1A power via:
 
 ## Next Steps
 
+- [Arduino Library](Arduino-Library.md) - Use Area65Sender library for Arduino projects
 - [Hardware Integration](Hardware-Integration.md) - Connect sensors
 - [API Reference](API-Reference.md) - Data protocol details
 - [Troubleshooting](Troubleshooting.md) - Common issues
