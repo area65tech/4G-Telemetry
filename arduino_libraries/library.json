@@ -1,5 +1,5 @@
 {
-    "name": "area65sender",
+    "name": "area65_uart",
     "version": "1.0.0",
     "description": "A library for transmitting multi-parameter data as JSON via SoftwareSerial on Arduino.",
     "keywords": "json, serial, telemetry, data-transmission",

@@ -60,15 +60,15 @@ Plug-and-play LTE Cat 1 telemetry module for M2M and IoT applications with multi
 
 | Platform | Interface | Location |
 |----------|-----------|----------|
-| Arduino | UART | [`examples/arduino/Area65 Bidirectional/`](examples/arduino/Area65%20Bidirectional/) |
-| Arduino | UART (Library) | [`arduino_libraries/area65sender/`](arduino_libraries/area65sender/) |
+| Arduino | UART | [`examples/arduino/Area65_UART_Library_Example/`](examples/arduino/Area65_UART_Library_Example/) |
+| Arduino | UART (Library) | [`arduino_libraries/area65_uart/`](arduino_libraries/area65_uart/) |
 
 ### Arduino Library
 
-The [`Area65Sender`](docs/wiki/Arduino-Library.md) library provides a professional-grade interface for transmitting multi-parameter data as JSON via SoftwareSerial on Arduino platforms.
+The [`Area65UART`](docs/wiki/Arduino-Library.md) library provides a professional-grade interface for transmitting multi-parameter data as JSON via SoftwareSerial on Arduino platforms.
 
 **Installation:**
-1. Download [`area65sender.zip`](arduino_libraries/area65sender.zip)
+1. Download [`area65_uart.zip`](arduino_libraries/area65_uart.zip)
 2. In Arduino IDE: **Sketch** > **Include Library** > **Add .ZIP Library**
 3. Select the downloaded file and restart IDE
 

@@ -1,5 +1,5 @@
-#ifndef Area65Sender_h
-#define Area65Sender_h
+#ifndef Area65UART_h
+#define Area65UART_h
 
 #include <Arduino.h>
 #include <SoftwareSerial.h>
@@ -29,7 +29,7 @@
 #define DEFAULT_SERIAL_BAUD 57600
 
 /**
- * @class Area65Sender
+ * @class Area65UART
  * @brief A professional-grade library for transmitting multi-parameter data as JSON
  *        via SoftwareSerial on Arduino platforms.
  * 
@@ -51,10 +51,10 @@
  * @code
  * #include <Arduino.h>
  * #include <SoftwareSerial.h>
- * #include <area65sender.h>
+ * #include <area65_uart.h>
  * 
  * SoftwareSerial mySerial(10, 11);
- * Area65Sender sender(mySerial);
+ * Area65UART sender(mySerial);
  * 
  * void setup() {
  *   Serial.begin(115200);
@@ -76,10 +76,10 @@
  * }
  * @endcode
  */
-class Area65Sender {
+class Area65UART {
   public:
     /**
-     * @brief Constructs an Area65Sender instance.
+     * @brief Constructs an Area65UART instance.
      * 
      * Initializes the sender with the specified SoftwareSerial object for
      * JSON transmission. The internal delay is set to MIN_SEND_DELAY (2000ms)
@@ -90,20 +90,7 @@ class Area65Sender {
      *        configure the pin assignments before passing the object, but
      *        initialization (begin()) is handled automatically by this library.
      */
-    Area65Sender(SoftwareSerial& serial);
-    
-    /**
-     * @brief Transmits a single value as P1 in JSON format.
-     * 
-     * This method accepts one floating-point value and transmits it as P1.
-     * All values are automatically formatted to 2 decimal places.
-     * 
-     * @param firstValue The floating-point value to transmit as P1.
-     * @return true if transmission was successful (or skipped due to rate limiting).
-     * @note This method is primarily for internal use. Use sendData(int, ...) for
-     *       explicit control over parameter count.
-     */
-    bool sendData(float firstValue, ...);
+    Area65UART(SoftwareSerial& serial);
     
     /**
      * @brief Transmits 1-20 values as P1-P20 in JSON format.

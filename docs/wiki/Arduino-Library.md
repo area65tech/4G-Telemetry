@@ -1,8 +1,8 @@
 # Arduino Library
 
-## Area65Sender Library
+## Area65UART Library
 
-The Area65Sender library provides a professional-grade interface for transmitting multi-parameter data as JSON via SoftwareSerial on Arduino platforms.
+The Area65UART library provides a professional-grade interface for transmitting multi-parameter data as JSON via SoftwareSerial on Arduino platforms.
 
 ### Features
 
@@ -18,10 +18,10 @@ The Area65Sender library provides a professional-grade interface for transmittin
 
 #### Arduino IDE
 
-1. Download the [`area65sender.zip`](../arduino_libraries/area65sender.zip) archive
+1. Download the [`area65_uart.zip`](../arduino_libraries/area65_uart.zip) archive
 2. Open Arduino IDE
 3. Go to **Sketch** > **Include Library** > **Add .ZIP Library**
-4. Select the downloaded `area65sender.zip` file
+4. Select the downloaded `area65_uart.zip` file
 5. Restart Arduino IDE
 
 #### PlatformIO
@@ -30,7 +30,7 @@ Add the following to your `platformio.ini`:
 
 ```ini
 lib_deps = 
-    area65sender
+    area65_uart
 lib_extra_dirs = 
     ../../../../arduino_libraries
 ```
@@ -40,17 +40,17 @@ lib_extra_dirs =
 ```cpp
 #include <Arduino.h>
 #include <SoftwareSerial.h>
-#include <area65sender.h>
+#include <area65_uart.h>
 
 // Create SoftwareSerial object (RX, TX)
 SoftwareSerial mySerial(10, 11);
 
-// Create Area65Sender instance
-Area65Sender sender(mySerial);
+// Create Area65UART instance
+Area65UART sender(mySerial);
 
 void setup() {
   Serial.begin(115200);
-  // mySerial is automatically initialized in the Area65Sender constructor
+  // mySerial is automatically initialized in the Area65UART constructor
 }
 
 void loop() {
@@ -91,20 +91,20 @@ If `sendData()` is called before the delay has passed, the send will be skipped.
 
 ### Example Projects
 
-- [`Area65 Bidirectional`](../examples/arduino/Area65%20Bidirectional) - Complete bidirectional communication example
+- [`Area65_UART_Library_Example`](../examples/arduino/Area65_UART_Library_Example) - Complete bidirectional communication example
 
 ### Library Structure
 
 ```
 arduino_libraries/
-├── area65sender/
+├── area65_uart/
 │   ├── src/
-│   │   ├── area65sender.h
-│   │   └── area65sender.cpp
+│   │   ├── area65_uart.h
+│   │   └── area65_uart.cpp
 │   └── README.md
 ├── library.properties      # Arduino IDE compatibility
 ├── library.json           # PlatformIO compatibility
-└── area65sender.zip       # Distributable library archive
+└── area65_uart.zip       # Distributable library archive
 ```
 
 ### Technical Specifications

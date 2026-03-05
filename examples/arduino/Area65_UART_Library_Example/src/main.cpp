@@ -1,17 +1,17 @@
-// Include the Area65Sender library
+// Include the Area65UART library
 #include <Arduino.h>
 #include <SoftwareSerial.h>
-#include <area65sender.h>
+#include <area65_uart.h>
 
 // Create SoftwareSerial object (RX, TX)
 SoftwareSerial mySerial(10, 11);
 
-// Create Area65Sender instance
-Area65Sender sender(mySerial);
+// Create Area65UART instance
+Area65UART sender(mySerial);
 
 void setup() {
   Serial.begin(115200);
-  // mySerial is automatically initialized in the Area65Sender constructor
+  // mySerial is automatically initialized in the Area65UART constructor
 }
 
 void loop() {

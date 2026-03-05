@@ -1,10 +1,10 @@
-# Area65Sender Library
+# Area65UART Library
 
 A library for sending P1-P20 data values as JSON via SoftwareSerial on Arduino.
 
 ## Installation
 
-1. Copy the `area65sender` folder to your Arduino `libraries` folder
+1. Copy the `area65_uart` folder to your Arduino `libraries` folder
 2. Restart Arduino IDE
 
 ## Usage
@@ -12,13 +12,13 @@ A library for sending P1-P20 data values as JSON via SoftwareSerial on Arduino.
 ```cpp
 #include <Arduino.h>
 #include <SoftwareSerial.h>
-#include <area65sender.h>
+#include <area65_uart.h>
 
 // Create SoftwareSerial object (RX, TX)
 SoftwareSerial mySerial(10, 11);
 
-// Create Area65Sender instance
-Area65Sender sender(mySerial);
+// Create Area65UART instance
+Area65UART sender(mySerial);
 
 void setup() {
   Serial.begin(115200);

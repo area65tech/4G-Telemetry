@@ -29,8 +29,8 @@ void loop() {
     // Format as JSON
     char buf[120];
     snprintf(buf, sizeof(buf),
-        "{"P1":%.2f,"P2":%.2f,"P3":%.2f,"
-        ""P4":%.2f,"P5":%.2f,"P6":%.2f}",
+        "{\"P1\":%.2f,\"P2\":%.2f,\"P3\":%.2f,"
+        "\"P4\":%.2f,\"P5\":%.2f,\"P6\":%.2f}",
         P1, P2, P3, P4, P5, P6);
 
     // Send to telemetry module

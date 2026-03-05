@@ -1,37 +1,19 @@
 #include "Arduino.h"
-#include "area65sender.h"
+#include "area65_uart.h"
 #include <stdarg.h>
 
-Area65Sender::Area65Sender(SoftwareSerial& serial) {
+Area65UART::Area65UART(SoftwareSerial& serial) {
   _serial = &serial;
   _lastSendTime = 0;
   _minDelay = MIN_SEND_DELAY;
   _serial->begin(DEFAULT_SERIAL_BAUD);
 }
 
-void Area65Sender::setDelay(int milliseconds) {
+void Area65UART::setDelay(int milliseconds) {
   _minDelay = (milliseconds > 0) ? milliseconds : 0;
 }
 
-bool Area65Sender::sendData(float firstValue, ...) {
-  va_list args;
-  va_start(args, firstValue);
-  
-  _values[0] = firstValue;
-  int count = 1;
-  
-  while (count < MAX_VALUES) {
-    float nextVal = va_arg(args, float);
-    _values[count] = nextVal;
-    count++;
-  }
-  
-  va_end(args);
-  
-  return true;
-}
-
-bool Area65Sender::sendData(int numValues, ...) {
+bool Area65UART::sendData(int numValues, ...) {
   if (numValues < 1 || numValues > MAX_VALUES) {
     Serial.println(F("ERROR: Invalid number of values. Must be 1 to 20."));
     return false;
@@ -58,7 +40,7 @@ bool Area65Sender::sendData(int numValues, ...) {
   return true;
 }
 
-void Area65Sender::sendJson(int numValues) {
+void Area65UART::sendJson(int numValues) {
   char buffers[MAX_VALUES][8];
   
   for (int i = 0; i < numValues; i++) {
