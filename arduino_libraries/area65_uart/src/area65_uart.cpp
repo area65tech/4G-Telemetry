@@ -22,7 +22,7 @@ bool Area65UART::sendData(int numValues, ...) {
   va_list args;
   va_start(args, numValues);
   
-  for (int i = 0; i < numValues; i++) {
+  for (int i = 0; i <= numValues; i++) {
     _values[i] = va_arg(args, double);
   }
   
@@ -43,7 +43,7 @@ bool Area65UART::sendData(int numValues, ...) {
 void Area65UART::sendJson(int numValues) {
   char buffers[MAX_VALUES][8];
   
-  for (int i = 0; i < numValues; i++) {
+  for (int i = 0; i <= numValues; i++) {
     dtostrf(_values[i], 5, 2, buffers[i]);
   }
   
