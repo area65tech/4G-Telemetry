@@ -46,13 +46,13 @@ Plug-and-play LTE Cat 1 telemetry module for M2M and IoT applications with multi
 
 ---
 
-## Documentation
+## [Documentation](https://4g-telemetry-wiki.readthedocs.io/en/latest/index.html)
 
-- [Getting Started](docs/wiki/Getting-Started.md)
-- [Hardware Integration](docs/wiki/Hardware-Integration.md)
-- [API Reference](docs/wiki/API-Reference.md)
-- [Arduino Library](docs/wiki/Arduino-Library.md)
-- [Troubleshooting](docs/wiki/Troubleshooting.md)
+- [Getting Started](https://4g-telemetry-wiki.readthedocs.io/en/latest/getting-started.html)
+- [Hardware Integration](https://4g-telemetry-wiki.readthedocs.io/en/latest/hardware-integration.html)
+- [API Reference](https://4g-telemetry-wiki.readthedocs.io/en/latest/api-reference.html)
+- [Arduino Library](https://4g-telemetry-wiki.readthedocs.io/en/latest/arduino-library.html)
+- [Troubleshooting](https://4g-telemetry-wiki.readthedocs.io/en/latest/troubleshooting.html)
 
 ---
 
