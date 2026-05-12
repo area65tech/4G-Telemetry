@@ -27,11 +27,28 @@ void loop() {
     float P6 = random(550,  681)  / 100.0;
 
     // Format as JSON
-    char buf[120];
-    snprintf(buf, sizeof(buf),
-        "{\"P1\":%.2f,\"P2\":%.2f,\"P3\":%.2f,"
-        "\"P4\":%.2f,\"P5\":%.2f,\"P6\":%.2f}",
-        P1, P2, P3, P4, P5, P6);
+char p1[10];
+char p2[10];
+char p3[10];
+char p4[10];
+char p5[10];
+char p6[10];
+
+dtostrf(P1, 0, 2, p1);
+dtostrf(P2, 0, 2, p2);
+dtostrf(P3, 0, 2, p3);
+dtostrf(P4, 0, 2, p4);
+dtostrf(P5, 0, 2, p5);
+dtostrf(P6, 0, 2, p6);
+
+char buf[200];
+
+sprintf(buf,
+    "{\"P1\":%s,\"P2\":%s,\"P3\":%s,"
+    "\"P4\":%s,\"P5\":%s,\"P6\":%s}",
+    p1, p2, p3, p4, p5, p6);
+
+Serial.println(buf);
 
     // Send to telemetry module
     mySerial.println(buf);
