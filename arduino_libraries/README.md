@@ -4,8 +4,9 @@ A library for sending P1-P20 data values as JSON via SoftwareSerial on Arduino.
 
 ## Installation
 
-1. Copy the `area65_uart` folder to your Arduino `libraries` folder
-2. Restart Arduino IDE
+1. Download the area65_uart.zip from github
+2. in Arduino IDE click: Sketch → Include Library → Add .ZIP Library → select the ZIP
+3. Restart Arduino IDE
 
 ## Usage
 
